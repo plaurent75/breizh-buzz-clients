@@ -1,0 +1,5 @@
+.login h1 a {
+            background-image: url('images/breizhbuzz-logo.png');
+            width: 300px !important;
+            background-size: contain !important;
+        }
