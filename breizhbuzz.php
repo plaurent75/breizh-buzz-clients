@@ -132,13 +132,14 @@ add_action( 'admin_bar_menu', 'bbz_link_to_mypage', 999 );
 function bbz_link_to_mypage( $wp_admin_bar ) {
 	$args = array(
 		'id'    => 'bbz_site',
-		'title' => 'Breizh Buzz',
-		'href'  => 'http://breizhbuzz.com',
-		'meta'  => array( 'target' => 'blank' )
+		'title' => '<img src="'.plugin_dir_url( __FILE__ ) . 'css/images/bbz-hand.png" width="16px" height="16px" />&nbsp;Breizh Buzz // SERVICES&nbsp;&#9660;',
 		);
 	$wp_admin_bar->add_node( $args );
 	$wp_admin_bar->add_node( bbz_make_parent_node('support','Support et Service Clients','http://support.breizhbuzz.com') );
 	$wp_admin_bar->add_node( bbz_make_parent_node('support_mail','Contactez nous par email','mailto:supportbbz@breizhbuzz.com') );
+	$wp_admin_bar->add_node( bbz_make_parent_node('cloozi','Cloozi : Plateforme Collaborative','http://www.cloozi.com') );
+	$wp_admin_bar->add_node( bbz_make_parent_node('site_url','BreizhBuzz.com','http://breizhbuzz.com') );
+	
 }
 
 function bbz_make_parent_node( $id='',$title,$href='',$parent='bbz_site' ) {
