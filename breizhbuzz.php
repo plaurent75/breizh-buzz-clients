@@ -5,7 +5,7 @@
  * Description: Fonctionnalité et filtre pour les sites clients de Breizh Buzz
  * Author: Patrice LAURENT
  * Author URI: http://www.patricelaurent.net
- * Version: 1.0
+ * Version: 1.1
  */
 include_once('updater.php');
 if (is_admin()) { 
@@ -16,7 +16,7 @@ if (is_admin()) {
             'api_url' => 'https://api.github.com/repos/plaurent75/breizh-buzz-clients', // the GitHub API url of your GitHub repo
             'raw_url' => 'https://raw.github.com/plaurent75/breizh-buzz-clients/master', // the GitHub raw url of your GitHub repo
             'github_url' => 'https://github.com/plaurent75/breizh-buzz-clients', // the GitHub url of your GitHub repo
-            'zip_url' => 'https://github.com/plaurent75/rbreizh-buzz-clients/zipball/master', // the zip url of the GitHub repo
+            'zip_url' => 'https://github.com/plaurent75/breizh-buzz-clients/zipball/master', // the zip url of the GitHub repo
             'sslverify' => false, // whether WP should check the validity of the SSL cert when getting an update, see https://github.com/jkudish/WordPress-GitHub-Plugin-Updater/issues/2 and https://github.com/jkudish/WordPress-GitHub-Plugin-Updater/issues/4 for details
             'requires' => '4.0', // which version of WordPress does your plugin require?
             'tested' => '4.31', // which version of WordPress is your plugin tested up to?
