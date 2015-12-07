@@ -5,7 +5,7 @@
  * Description: Fonctionnalité et filtre pour les sites clients de Breizh Buzz
  * Author: Patrice LAURENT
  * Author URI: http://www.patricelaurent.net
- * Version: 1.2
+ * Version: 1.3
  */
 include_once('lib/updater.php');
 if (is_admin()) { 
@@ -25,19 +25,7 @@ if (is_admin()) {
             );
 new WP_GitHub_Updater($config);
 }
-
-/********************************************************
-* Jetpack Publicize
-*********************************************************/
-
-// HashTags
-
-
-//add_filter( 'wpas_default_suffix', 'breizhbuzz_default_publicize_hashtag_suffix', 10, 4 );
-function breizhbuzz_default_publicize_hashtag_suffix() {
-	$default_tags = ' #rosporden';
-	return $default_tags;
-}
+include_once('lib/jetpack.php');
 
 
 /********************************************************
