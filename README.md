@@ -1,4 +1,4 @@
-~Current Version:1.1~
+~Current Version:1.2~
 
-**Version 1.1
+**Version 1.2 and SSL
 Add auto-updater from Github
