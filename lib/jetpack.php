@@ -58,3 +58,28 @@ function prefix_hide_jetpack_modules( $modules ) {
 	);
 	return array_intersect_key( $modules, array_flip( $whitelist ) );
 }
+
+/**
+* Jetpack Only for Admin
+*/
+
+function bbz_jetpack_rm_menu() {
+	if( class_exists( 'Jetpack' ) && !current_user_can( 'manage_options' ) ) {
+	
+		// This removes the page from the menu in the dashboard
+		remove_menu_page( 'jetpack' );
+		remove_submenu_page( 'admin.php','sharing' );
+		remove_submenu_page( 'options-general.php','sharing' );
+		remove_menu_page( 'tools.php' );
+	}
+}
+add_action( 'admin_init', 'bbz_jetpack_rm_menu' ); 
+
+function bbz_jetpack_rm_icon() {
+	if( class_exists( 'Jetpack' ) && !current_user_can( 'manage_options' ) ) {
+	
+		// This removes the small icon in the admin bar
+		echo "\n" . '<style type="text/css" media="screen">#wp-admin-bar-notes { display: none; }</style>' . "\n";
+	}
+}
+add_action( 'admin_head', 'bbz_jetpack_rm_icon' );
