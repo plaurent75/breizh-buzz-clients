@@ -7,7 +7,7 @@
  * Author URI: http://www.patricelaurent.net
  * Version: 1.1
  */
-include_once('updater.php');
+include_once('lib/updater.php');
 if (is_admin()) { 
 // note the use of is_admin() to double check that this is happening in the admin
 	$config = array(
