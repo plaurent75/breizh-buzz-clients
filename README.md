@@ -1,6 +1,10 @@
-~Current Version:1.3.1~
+~Current Version:1.4~
 
-**Version 1.3.
+**Version 1.3.1
+
+100% Compatiblity with Wordpress 4.4
+
+**Version 1.3.1
 
 Add class exception
 

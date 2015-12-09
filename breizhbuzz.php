@@ -5,7 +5,7 @@
  * Description: Fonctionnalité et filtre pour les sites clients de Breizh Buzz
  * Author: Patrice LAURENT
  * Author URI: http://www.patricelaurent.net
- * Version: 1.3.1
+ * Version: 1.4
  */
 include_once('lib/updater.php');
 if (is_admin()) { 
@@ -19,7 +19,7 @@ if (is_admin()) {
             'zip_url' => 'https://github.com/plaurent75/breizh-buzz-clients/zipball/master', // the zip url of the GitHub repo
             'sslverify' => true, // whether WP should check the validity of the SSL cert when getting an update, see https://github.com/jkudish/WordPress-GitHub-Plugin-Updater/issues/2 and https://github.com/jkudish/WordPress-GitHub-Plugin-Updater/issues/4 for details
             'requires' => '4.0', // which version of WordPress does your plugin require?
-            'tested' => '4.31', // which version of WordPress is your plugin tested up to?
+            'tested' => '4.4', // which versionof WordPress is your plugin tested up to?
             'readme' => 'README.md', // which file to use as the readme for the version number
             'access_token' => ''
             );
