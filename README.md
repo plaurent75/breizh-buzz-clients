@@ -1,4 +1,8 @@
-~Current Version:1.3~
+~Current Version:1.3.1~
+
+**Version 1.3.
+
+Add class exception
 
 **Version 1.3
 

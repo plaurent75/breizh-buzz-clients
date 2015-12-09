@@ -5,7 +5,7 @@
  * Description: Fonctionnalité et filtre pour les sites clients de Breizh Buzz
  * Author: Patrice LAURENT
  * Author URI: http://www.patricelaurent.net
- * Version: 1.3
+ * Version: 1.3.1
  */
 include_once('lib/updater.php');
 if (is_admin()) { 
