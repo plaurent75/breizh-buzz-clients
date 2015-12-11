@@ -5,14 +5,14 @@
  * Description: Fonctionnalité et filtre pour les sites clients de Breizh Buzz
  * Author: Patrice LAURENT
  * Author URI: http://www.patricelaurent.net
- * Version: 1.4
+ * Version: 1.4.0.1
  */
 include_once('lib/updater.php');
 if (is_admin()) { 
 // note the use of is_admin() to double check that this is happening in the admin
 	$config = array(
             'slug' => plugin_basename(__FILE__), // this is the slug of your plugin
-            'proper_folder_name' => 'breizh-buzz-clients', // this is the name of the folder your plugin lives in
+            'proper_folder_name' => 'breizh-buzz-clients-master', // this is the name of the folder your plugin lives in
             'api_url' => 'https://api.github.com/repos/plaurent75/breizh-buzz-clients', // the GitHub API url of your GitHub repo
             'raw_url' => 'https://raw.github.com/plaurent75/breizh-buzz-clients/master', // the GitHub raw url of your GitHub repo
             'github_url' => 'https://github.com/plaurent75/breizh-buzz-clients', // the GitHub url of your GitHub repo
