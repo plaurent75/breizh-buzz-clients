@@ -5,10 +5,10 @@
  * Description: Fonctionnalité et filtre pour les sites clients de Breizh Buzz
  * Author: Patrice LAURENT
  * Author URI: http://www.patricelaurent.net
- * Version: 1.4.0.1
+ * Version: 1.4.0.2
  */
 include_once('lib/updater.php');
-if (is_admin()) { 
+if (is_admin()) {
 // note the use of is_admin() to double check that this is happening in the admin
 	$config = array(
             'slug' => plugin_basename(__FILE__), // this is the slug of your plugin
@@ -83,7 +83,7 @@ add_filter('admin_footer_text', 'breizhbuzz_remove_footer_admin');
 function breizhbuzz_admin_favicon() {
 	echo '<link rel="Shortcut Icon" type="image/x-icon" href="'.get_stylesheet_directory_uri().'/dist/images/favicon.png" />';
 }
-add_action('admin_head', 'breizhbuzz_admin_favicon');
+//add_action('admin_head', 'breizhbuzz_admin_favicon');
 
 // Display BreizhBuzz Widget
 function breizhbuzz_dashboard_widget()
@@ -139,13 +139,13 @@ function bbz_link_to_mypage( $wp_admin_bar ) {
 	$wp_admin_bar->add_node( bbz_make_parent_node('support_mail','Contactez nous par email','mailto:supportbbz@breizhbuzz.com') );
 	$wp_admin_bar->add_node( bbz_make_parent_node('cloozi','Cloozi : Plateforme Collaborative','http://www.cloozi.com') );
 	$wp_admin_bar->add_node( bbz_make_parent_node('site_url','BreizhBuzz.com','http://breizhbuzz.com') );
-	
+
 }
 
 function bbz_make_parent_node( $id='',$title,$href='',$parent='bbz_site' ) {
 	$args = array(
-		'id'     => $id, 
-		'title'  => $title, 
+		'id'     => $id,
+		'title'  => $title,
 		'href'  => $href,
 		'meta'  => array( 'target' => 'blank' ),
 		'parent' => $parent

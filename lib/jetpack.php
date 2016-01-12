@@ -25,7 +25,7 @@ add_filter( 'jetpack_get_default_modules', 'bbz_auto_activate_stats' );
 * Just hide the unwanted modules
 */
 
-add_filter( 'jetpack_get_available_modules', 'prefix_hide_jetpack_modules' );
+add_filter( 'jetpack_get_available_modules', 'prefix_allow_jetpack_modules' );
 /**
 * Disable all non-whitelisted jetpack modules.
 *
@@ -40,11 +40,12 @@ add_filter( 'jetpack_get_available_modules', 'prefix_hide_jetpack_modules' );
 * @param  array $modules the existing list of Jetpack modules
 * @return array $modules the amended list of Jetpack modules
 */
-function prefix_hide_jetpack_modules( $modules ) {
+function prefix_allow_jetpack_modules( $modules ) {
 	// A list of Jetpack modules which are allowed to activate.
 	$whitelist = array(
 		'carousel',
 		'comments',
+		'contact-form',
 		'enhanced-distribution',
 		'photon',
 		'protect',
@@ -65,7 +66,7 @@ function prefix_hide_jetpack_modules( $modules ) {
 
 function bbz_jetpack_rm_menu() {
 	if( class_exists( 'Jetpack' ) && !current_user_can( 'manage_options' ) ) {
-	
+
 		// This removes the page from the menu in the dashboard
 		remove_menu_page( 'jetpack' );
 		remove_submenu_page( 'admin.php','sharing' );
@@ -73,11 +74,11 @@ function bbz_jetpack_rm_menu() {
 		remove_menu_page( 'tools.php' );
 	}
 }
-add_action( 'admin_init', 'bbz_jetpack_rm_menu' ); 
+add_action( 'admin_init', 'bbz_jetpack_rm_menu' );
 
 function bbz_jetpack_rm_icon() {
 	if( class_exists( 'Jetpack' ) && !current_user_can( 'manage_options' ) ) {
-	
+
 		// This removes the small icon in the admin bar
 		echo "\n" . '<style type="text/css" media="screen">#wp-admin-bar-notes { display: none; }</style>' . "\n";
 	}
