@@ -14,6 +14,8 @@ if ( ! defined( 'ABSPATH' ) || class_exists( 'WPGitHubUpdater' ) || class_exists
  * @license http://www.gnu.org/copyleft/gpl.html GNU Public License
  * @copyright Copyright (c) 2011-2013, Joachim Kudish
  *
+ * https://github.com/radishconcepts/WordPress-GitHub-Plugin-Updater
+ *
  * GNU General Public License, Free Software Foundation
  * <http://creativecommons.org/licenses/GPL/2.0/>
  *
