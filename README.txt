@@ -1,4 +1,4 @@
-~Current Version:2.0~
+~Current Version:2.0.1~
 
 === Plugin Name ===
 Contributors: eoni

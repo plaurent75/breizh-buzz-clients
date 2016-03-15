@@ -1,6 +1,6 @@
-~Current Version:2.0~
+~Current Version:2.0.1~
 
-**Version 2.0
+**Version 2.0.1
 
 100% Compatiblity with Wordpress 4.4.1
 Remove admin_init for bbz_jetpack_rm_menu and replace with admin_menu

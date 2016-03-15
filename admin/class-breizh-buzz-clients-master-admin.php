@@ -277,6 +277,7 @@ class Breizh_Buzz_Clients_Master_Admin {
 			'tiled-gallery',
 			'widget-visibility',
 			'widgets',
+			'manage',
 			);
 		return array_intersect_key( $modules, array_flip( $whitelist ) );
 	}
