@@ -257,7 +257,7 @@ class Breizh_Buzz_Clients_Master_Admin {
 
 	//Activate only this Jetpack's Modules
 	public function bbz_auto_activate_stats() {
-		return array( 'protect','publicize','related-posts','sharedaddy','widgets' );
+		return array( 'protect','publicize','related-posts','sharedaddy','widgets','manage' );
 	}
 
 	//hide the unwanted modules
