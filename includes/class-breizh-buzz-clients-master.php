@@ -174,6 +174,7 @@ class Breizh_Buzz_Clients_Master {
 		$this->loader->add_filter( 'wpseo_metabox_prio',$plugin_admin, 'breizhbuzz_yoast_bottom' );
 		$this->loader->add_action( 'admin_init',$plugin_admin, 'seo_bbz_ignore_tour' ,999);
 		$this->loader->add_action( 'admin_bar_menu',$plugin_admin, 'bbz_seo_remove_adminbar_settings' ,999);
+		$this->loader->add_action( 'admin_init',$plugin_admin, 'disable_yoast_notifications' ,999);
 		//JetPack
 		$this->loader->add_filter( 'jetpack_get_default_modules',$plugin_admin, 'bbz_auto_activate_stats' );
 		$this->loader->add_filter( 'jetpack_get_available_modules',$plugin_admin, 'bbz_allow_jetpack_modules' );

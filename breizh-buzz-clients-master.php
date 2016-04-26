@@ -16,7 +16,7 @@
  * Plugin Name:       Breizh Buzz Clients
  * Plugin URI:        http://breizhbuzz.com
  * Description:       Fonctionnalité et filtre pour les sites clients de Breizh Buzz.
- * Version:           2.0.1
+ * Version:           2.1.0
  * Author:            LAURENT Patrice
  * Author URI:        http://www.patricelaurent.net
  * License:           GPL-2.0+

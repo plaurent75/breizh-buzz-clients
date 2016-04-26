@@ -1,4 +1,8 @@
-~Current Version:2.0.1~
+~Current Version:2.1.0~
+
+**Version 2.1.0
+
+Remove agressive Yoast Notifications
 
 **Version 2.0.1
 

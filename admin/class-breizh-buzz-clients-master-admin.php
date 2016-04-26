@@ -251,6 +251,14 @@ class Breizh_Buzz_Clients_Master_Admin {
 		return false;
 	}
 
+	//Disable Excessive Yoast Notification
+	public function disable_yoast_notifications(){
+		if (is_plugin_active('wordpress-seo/wp-seo.php')) {
+			remove_action('admin_notices', array(Yoast_Notification_Center::get(), 'display_notifications'));
+			remove_action('all_admin_notices', array(Yoast_Notification_Center::get(), 'display_notifications'));
+		}
+	}
+
 	/********************************************************
 	* Jetpack
 	*********************************************************/
@@ -285,20 +293,20 @@ class Breizh_Buzz_Clients_Master_Admin {
 	//Jetpack Only for Admin
 	public function bbz_jetpack_rm_menu() {
 		remove_menu_page( 'tools.php' );
-	if( class_exists( 'Jetpack' ) && !current_user_can( 'manage_options' ) ) {
+		if( class_exists( 'Jetpack' ) && !current_user_can( 'manage_options' ) ) {
 
 		// This removes the page from the menu in the dashboard
-		remove_menu_page( 'jetpack' );
-		remove_submenu_page( 'admin.php','sharing' );
-		remove_submenu_page( 'options-general.php','sharing' );
+			remove_menu_page( 'jetpack' );
+			remove_submenu_page( 'admin.php','sharing' );
+			remove_submenu_page( 'options-general.php','sharing' );
 		}
 	}
 
 	function bbz_jetpack_rm_icon() {
-	if( class_exists( 'Jetpack' ) && !current_user_can( 'manage_options' ) ) {
+		if( class_exists( 'Jetpack' ) && !current_user_can( 'manage_options' ) ) {
 
 		// This removes the small icon in the admin bar
-		echo "\n" . '<style type="text/css" media="screen">#wp-admin-bar-notes { display: none; }</style>' . "\n";
+			echo "\n" . '<style type="text/css" media="screen">#wp-admin-bar-notes { display: none; }</style>' . "\n";
 		}
 	}
 }
